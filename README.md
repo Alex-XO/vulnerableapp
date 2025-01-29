@@ -5,7 +5,7 @@
 ## **Установка и запуск**
 
 ### **1. Клонируем репозиторий**
-```bas
+```bash
 git clone https://github.com/Alex-XO/vulnerableapp.git
 cd vulnerableapp
 ```

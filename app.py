@@ -111,14 +111,14 @@ def comments():
             comments = f.read()
 
     # Отображаем комментарии на странице (включая потенциально вредоносный код)
-    return render_template_string('''
+    return '''
         <h1>Comments</h1>
         <form method="POST">
             <input type="text" name="comment" placeholder="Leave a comment">
             <input type="submit" value="Submit">
         </form>
-        <pre>{{ comments }}</pre>
-    ''', comments=comments)
+        
+    ''' + comments
 
 # Уязвимость RCE (Remote Code Execution) через поле поиска
 @app.route('/search', methods=['GET', 'POST'])
